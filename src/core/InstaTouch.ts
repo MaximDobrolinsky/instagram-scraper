@@ -240,6 +240,7 @@ export class InstaTouch {
                     resolve(response.body);
                 }
             } catch (error) {
+                console.log(error);
                 if (error.name === 'StatusCodeError') {
                     reject(`Can't find requested data`);
                 } else if (error.name === 'RequestError') {
